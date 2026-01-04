@@ -1,12 +1,12 @@
 # C++ & Python Linear Regression Tool
 A high-performance linear regression application that combines a **C++ backend** for mathematical calculations with a **Python frontend** for data visualization.
 
-## 🚀 Features
+## Features
 - **High Performance:** Calculation logic (slope and y-intercept) is written in C++ and linked via `ctypes`.
 - **Visualization:** Generates professional-grade regression plots using Matplotlib.
 - **Standalone Executable:** Fully bundled for macOS using PyInstaller.
 
-## 🛠️ How It Works
+## How It Works
 The project uses a "bridge" approach:
 1. **LinReg.cpp**: Contains the math logic. It is compiled into a shared library (`liblinreg.dylib`).
 2. **LinearRegressionGraph.py**: The user interface. It loads the compiled C++ library using Python's `ctypes` module to perform the calculations.
@@ -18,7 +18,7 @@ The project uses a "bridge" approach:
 - `liblinreg.dylib`: The compiled machine-code library (Apple Silicon).
 - `dist/`: Contains the standalone executable version.
 
-## 📥 Installation & Usage
+## Installation & Usage
 
 ### Method 1: Use the Standalone App (Easiest) - Works only with Mac, M1 chips and after
 1. Go to the **Releases** section of this GitHub repo.
