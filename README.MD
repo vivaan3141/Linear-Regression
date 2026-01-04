@@ -1,22 +1,42 @@
-The LinReg Library is written in C++. In contains 2 functions that calculate the slope and y intercepts of a line of fit for a set of points.
-Math equation for linear regression:
-Y = a + bx
+# C++ & Python Linear Regression Tool
+A high-performance linear regression application that combines a **C++ backend** for mathematical calculations with a **Python frontend** for data visualization.
 
-a = [ (Σy)(Σx²) − (Σx)(Σxy) ] / [ n(Σx²) − (Σx)² ]
+## 🚀 Features
+- **High Performance:** Calculation logic (slope and y-intercept) is written in C++ and linked via `ctypes`.
+- **Visualization:** Generates professional-grade regression plots using Matplotlib.
+- **Standalone Executable:** Fully bundled for macOS using PyInstaller.
 
-b = [ n(Σxy) − (Σx)(Σy) ] / [ n(Σx²) − (Σx)² ]
+## 🛠️ How It Works
+The project uses a "bridge" approach:
+1. **LinReg.cpp**: Contains the math logic. It is compiled into a shared library (`liblinreg.dylib`).
+2. **LinearRegressionGraph.py**: The user interface. It loads the compiled C++ library using Python's `ctypes` module to perform the calculations.
+3. **Matplotlib**: Used to render the scatter plot of data points and the calculated line of best fit.
 
-Symbol Definitions
-- Y is the predicted value
-- x is the independent variable
-- a is the y-intercept
-- b is the slope of the line
+## 📁 Files in this Repo
+- `LinearRegressionGraph.py`: The main Python script.
+- `LinReg.cpp`: The human-readable C++ source code.
+- `liblinreg.dylib`: The compiled machine-code library (Apple Silicon).
+- `dist/`: Contains the standalone executable version.
 
-- Σx  = sum of all x-values  
-- Σy  = sum of all y-values  
-- Σx² = sum of x-values squared  
-- Σxy = sum of the product of x and y  
-- n   = number of data points
+## 📥 Installation & Usage
 
-The python file uses the C++ library functions to take in the X and Y values, and call the functions to make an accurate prediction. In addition, it uses the MatPlotLib library to make a coordinate 
-plane, to graph the points and draw the line of best fit.
+### Method 1: Use the Standalone App (Easiest) - Works only with Mac, M1 chips and after
+1. Go to the **Releases** section of this GitHub repo.
+2. Download the `LinearRegressionGraph.zip`.
+3. Unzip the file.
+4. **Right-click** the file and select **Open** (required for the first run on macOS to bypass the "unidentified developer" warning).
+
+### Method 2: Run from Source
+If you want to run the code manually, ensure you have Python 3.14+ and Matplotlib installed:
+```bash 
+pip install matplotlib
+python3 LinearRegressionGraph.py
+
+Photos:
+
+
+Math equation for linear regression: Y = a + bx, a = [ (Σy)(Σx²) − (Σx)(Σxy) ] / [ n(Σx²) − (Σx)² ], b = [ n(Σxy) − (Σx)(Σy) ] / [ n(Σx²) − (Σx)² ]
+
+
+
+
