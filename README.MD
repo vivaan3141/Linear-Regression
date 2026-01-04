@@ -11,6 +11,8 @@ The project uses a "bridge" approach:
 1. **LinReg.cpp**: Contains the math logic. It is compiled into a shared library (`liblinreg.dylib`).
 2. **LinearRegressionGraph.py**: The user interface. It loads the compiled C++ library using Python's `ctypes` module to perform the calculations.
 3. **Matplotlib**: Used to render the scatter plot of data points and the calculated line of best fit.
+4. **Math equation for linear regression:** Y = a + bx, a = [ (Σy)(Σx²) − (Σx)(Σxy) ] / [ n(Σx²) − (Σx)² ], b = [ n(Σxy) − (Σx)(Σy) ] / [ n(Σx²) − (Σx)² ]
+
 
 ## 📁 Files in this Repo
 - `LinearRegressionGraph.py`: The main Python script.
@@ -35,7 +37,6 @@ python3 LinearRegressionGraph.py
 Photos:
 
 
-Math equation for linear regression: Y = a + bx, a = [ (Σy)(Σx²) − (Σx)(Σxy) ] / [ n(Σx²) − (Σx)² ], b = [ n(Σxy) − (Σx)(Σy) ] / [ n(Σx²) − (Σx)² ]
 
 
 
