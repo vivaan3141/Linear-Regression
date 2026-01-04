@@ -34,7 +34,8 @@ If you want to run the code manually, ensure you have Python 3.14+ and Matplotli
 pip install matplotlib
 python3 LinearRegressionGraph.py
 ```
-Photos:
+![Photos](image-url)
+
 
 
 
